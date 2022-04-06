@@ -12,3 +12,28 @@ int main()
 	printf("%d\n",A);
 	return 0;
 	}
+no 2：
+v2：
+2
+#include<stdio.h>
+int main(void)
+{
+	char s[] = "1*2/2*2*4*4";
+	int i,x;
+	x = s[0] - '0';
+	for(i = 1;s[i] != '\0';i++)
+	{
+		if(s[i] == '*')
+		{
+			i++;
+			x = x*(s[i] - '0');
+		}
+		else if(s[i] == '/')
+		{
+			i++;
+			x = x/(s[i] - '0');
+		}
+	}	
+	printf("%d\n",x);
+	return 0;
+}
